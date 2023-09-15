@@ -1,3 +1,6 @@
+import {Link} from 'react-router-dom';
+import { SCREENS } from '../../navigation/constants';
+
 const Navabr = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
@@ -9,21 +12,21 @@ const Navabr = () => {
       </button>
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="navbar-nav ms-auto p-4 p-lg-0">
-          <a href="index.html" className="nav-item nav-link active">Home</a>
-          <a href="about.html" className="nav-item nav-link">About</a>
-          <a href="service.html" className="nav-item nav-link">Services</a>
+          <Link to={SCREENS.HOME} className="nav-item nav-link active">Home</Link>
+          <Link to={SCREENS.ABOUT} className="nav-item nav-link">About</Link>
+          <Link to={SCREENS.SERVICES} className="nav-item nav-link">Services</Link>
           <div className="nav-item dropdown">
-            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Info</a>
             <div className="dropdown-menu fade-up m-0">
-              <a href="price.html" className="dropdown-item">Pricing Plan</a>
-              <a href="feature.html" className="dropdown-item">Features</a>
-              <a href="quote.html" className="dropdown-item">Free Quote</a>
-              <a href="team.html" className="dropdown-item">Our Team</a>
-              <a href="testimonial.html" className="dropdown-item">Testimonial</a>
+              <Link to={SCREENS.PRICING} className="dropdown-item">Pricing Plan</Link>
+              <Link to={SCREENS.FEATURES} className="dropdown-item">Features</Link>
+              <Link to={SCREENS.QUOTE} className="dropdown-item">Free Quote</Link>
+              <Link to={SCREENS.TEAM} className="dropdown-item">Our Team</Link>
+              <Link to={SCREENS.TESTIMONIAL} className="dropdown-item">Testimonial</Link>
               <a href="404.html" className="dropdown-item">404 Page</a>
             </div>
           </div>
-          <a href="contact.html" className="nav-item nav-link">Contact</a>
+          <Link to={SCREENS.CONTACT} className="nav-item nav-link">Contact</Link>
         </div>
         <h4 className="m-0 pe-lg-5 d-none d-lg-block"><i className="fa fa-headphones text-primary me-3"></i>+012 345 6789</h4>
       </div>
